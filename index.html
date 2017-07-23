@@ -11,9 +11,17 @@
     <p class="t2">hello 2</p>
     
     
+    <input id="v1" value="45"/>
+    
+    
+    
     <script src="compact.js"></script>
     <script>
         C('.t1').h('<h1>Hello World</h1>');
+        
+        //C('#v1').v('123');
+        
+        console.log(C('#v1').v());
         
         C('.t2').on('click', function() {
             console.log(C(this).h());

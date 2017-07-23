@@ -34,6 +34,19 @@ var C = function (s) {
             return c.e[0].innerHTML;
         }
     }
+    
+    // Value
+
+    c.v = (v = '') => {
+        if (v != '') {
+            c.e.map((e) => {
+                e.value = v;
+            });
+            return c;
+        } else {
+            return c.e[0].value;
+        }
+    }
 
     // Event
 
