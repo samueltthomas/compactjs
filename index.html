@@ -5,13 +5,20 @@
     <title>Compact JS</title>
 </head>
 <body>
-    <p id="t1">Hello</p>
+   
+   
+    <p class="t1">hello 1</p>
+    <p class="t2">hello 2</p>
+    
+    
     <script src="compact.js"></script>
     <script>
-        C('#t1').t('<h1>Hello World</h1>');
-        C('#t1').o('click', function() {
-            console.log(C(this).t());
+        C('.t1').h('<h1>Hello World</h1>');
+        
+        C('.t2').on('click', function() {
+            console.log(C(this).h());
         });
+        
     </script>
 </body>
 </html>

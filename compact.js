@@ -2,40 +2,45 @@ var C = function (s) {
 
     var c = {};
     var d = document;
-    
-    if(typeof(s)=='string') {
-        c.e = d.querySelector(s);
+
+    if (typeof (s) === 'string') {
+        c.e = [].slice.call(d.querySelectorAll(s));
+    } else {
+        c.e = [s];
     }
-    else {
-        c.e = s;
-    }
-        
+
     // Text
-    
+
     c.t = (t = '') => {
         if (t != '') {
-            c.e.textContent = t;
+            c.e.map((e) => {
+                e.textContent = t;
+            });
             return c;
         } else {
-            return c.e.textContent;
+            return c.e[0].textContent;
         }
     }
-    
+
     // HTML
-    
+
     c.h = (h = '') => {
         if (h != '') {
-            c.e.innerHTML = h;
+            c.e.map((e) => {
+                e.innerHTML = h;
+            });
             return c;
-        } else { 
-            return c.e.innerHTML;
+        } else {
+            return c.e[0].innerHTML;
         }
     }
-    
+
     // Event
 
-    c.o = (event, listener) => {
-        c.e.addEventListener(event, listener);
+    c.on = (event, listener) => {
+        c.e.map((e) => {
+            e.addEventListener(event, listener);
+        });
     }
 
     return c;
