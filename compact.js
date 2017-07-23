@@ -1,10 +1,18 @@
-var C = function () {
+var C = function (s) {
 
     var c = {};
-
-    c.e = document.querySelector(arguments[0]);
-
-    c.t = function (t = '') {
+    var d = document;
+    
+    if(typeof(s)=='string') {
+        c.e = d.querySelector(s);
+    }
+    else {
+        c.e = s;
+    }
+        
+    // Text
+    
+    c.t = (t = '') => {
         if (t != '') {
             c.e.textContent = t;
             return c;
@@ -12,7 +20,10 @@ var C = function () {
             return c.e.textContent;
         }
     }
-    c.h = function (h = '') {
+    
+    // HTML
+    
+    c.h = (h = '') => {
         if (h != '') {
             c.e.innerHTML = h;
             return c;
@@ -20,8 +31,10 @@ var C = function () {
             return c.e.innerHTML;
         }
     }
+    
+    // Event
 
-    c.o = function (event, listener) {
+    c.o = (event, listener) => {
         c.e.addEventListener(event, listener);
     }
 
