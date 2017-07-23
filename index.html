@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Compact JS</title>
+    <style>
+        .err {
+            color:red;
+            border:1px solid red;
+        }
+    </style>
 </head>
 <body>
    
@@ -26,6 +32,14 @@
         C('.t2').on('click', function() {
             console.log(C(this).h());
         });
+        
+        C('#v1').ac('err');
+        
+        setTimeout(()=>{
+            C('#v1').rc('err');
+        },1000);
+        
+        
         
     </script>
 </body>

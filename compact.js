@@ -34,7 +34,7 @@ var C = function (s) {
             return c.e[0].innerHTML;
         }
     }
-    
+
     // Value
 
     c.v = (v = '') => {
@@ -46,6 +46,25 @@ var C = function (s) {
         } else {
             return c.e[0].value;
         }
+    }
+
+
+    // Add Class
+
+    c.ac = (ac) => {
+        c.e.map((e) => {
+            e.classList.add(ac);
+        });
+        return c;
+    }
+    
+    // Remove Class
+
+    c.rc = (rc) => {
+        c.e.map((e) => {
+            e.classList.remove(rc);
+        });
+        return c;
     }
 
     // Event
