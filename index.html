@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compact JS</title>
+</head>
+<body>
+    <p id="t1">Hello</p>
+    <script src="compact.js"></script>
+    <script>
+        C('#t1').h('<h1>Hello World</h1>');
+        C('#t1').o('click', function() {
+            console.log('click');
+
+        });
+        console.log(C('#t1').h());
+    </script>
+</body>
+</html>
