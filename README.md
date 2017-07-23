@@ -19,7 +19,6 @@ The library is now just my hobby project only and its not ready for production u
     C('#id').v('Compact JS'); // Set Value
     C('#id').v() // Get Value
     
-    
     C('#id').ac('class'); // Add Class
     C('#id').rc('class'); // Remove Class
     
