@@ -21,7 +21,7 @@ Compact JS is not intended to be an alternative for any other libraries out ther
     C('#id').v('Compact JS'); // Set Value
     C('#id').v() // Get Value
     
-    C('#id').x(); // To remove from element from DOM
+    C('#id').x(); // To remove element from DOM
     
     C('#id').d('cost',100); // Set data-cost attribute
     C('#id').d('cost'); // Get data-cost attribute
