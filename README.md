@@ -10,7 +10,7 @@ Compact JS is not intended to be an alternative to any other feature-rich librar
 
 Compact JS is not suitable for large scale projects since direct manipulation of the DOM results in code that is difficult to maintain. Projects like Angular, React, VueJS etc provide better solutions for such use cases. 
 
-## Example 
+## Examples 
 
 ```javascript
     
