@@ -6,6 +6,7 @@ var C = function (s) {
     if (typeof (s) === 'string') {
         c.e = [].slice.call(d.querySelectorAll(s));
     } else {
+        // To handle C(this)
         c.e = [s];
     }
 
