@@ -2,13 +2,23 @@ var C = function (s) {
 
     var c = {};
     var d = document;
-
+    
     if (typeof (s) === 'string') {
         c.e = [].slice.call(d.querySelectorAll(s));
-    } else {
+    } 
+    else if (typeof (s) === 'function') {
+        document.addEventListener("DOMContentLoaded", (event) => {
+            s();
+        });
+    }
+    else {
         // To handle C(this)
         c.e = [s];
     }
+
+
+    // Ready Event
+
 
     // Text
 
@@ -99,6 +109,9 @@ var C = function (s) {
             e.addEventListener(event, listener);
         });
     }
+
+
+
 
     return c;
 

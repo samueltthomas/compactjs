@@ -13,6 +13,10 @@ Compact JS is not suitable for large scale projects since direct manipulation of
 ## Examples 
 
 ```javascript
+
+    C(() => {
+        console.log('DOM loaded');
+    });
     
     // In the place of #id you can use any CSS selector. 
     
