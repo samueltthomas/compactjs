@@ -23,7 +23,10 @@ Compact JS is a lightweight client-side JavaScript library which provides a very
     C('#id').ac('class'); // Add Class
     C('#id').rc('class'); // Remove Class
     
-    C('#id').on('click',function() { console.log(C(this).t()); }); // Event Handling
+    
+    // Event Handling. In the place of 'click' you can use any other valid event name
+    
+    C('#id').on('click',function() { console.log(C(this).t()); }); 
     
     
  ```
