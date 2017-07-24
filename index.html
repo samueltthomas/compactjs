@@ -26,19 +26,20 @@
     <script>
         C('.t1').h('<h1>Hello World</h1>');
         
-        //C('#v1').v('123');
+        C('#v1').v('123').d('cost',200);
         
-        console.log(C('#v1').v());
+        console.log(C('#v1').d('cost'));
+        
+        
+        
         
         C('.t2').on('click', function() {
             console.log(C(this).h());
         });
         
-        C('#v1').ac('err');
+       
         
-        setTimeout(()=>{
-            C('#v1').rc('err');
-        },1000);
+     
         
         
         

@@ -19,9 +19,13 @@ The library is now just my hobby project only and its not ready for production u
     C('#id').v('Compact JS'); // Set Value
     C('#id').v() // Get Value
     
+    C('#id').d('cost',100); // Set data-cost attribute
+    C('#id').rc('cost'); // Get data-cost attribute
+    
     C('#id').ac('class'); // Add Class
     C('#id').rc('class'); // Remove Class
     
     C('#id').on('click',function() { console.log(C(this).t()); }); // Event Handling
+    
     
  ```

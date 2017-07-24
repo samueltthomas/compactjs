@@ -47,6 +47,20 @@ var C = function (s) {
             return c.e[0].value;
         }
     }
+    
+    
+    // Data
+
+    c.d = (d='',v = '') => {
+        if (d!='' && v != '') {
+            c.e.map((e) => {
+                e.dataset[d] = v;
+            });
+            return c;
+        } else if(d!='') {
+            return c.e[0].dataset[d];
+        }
+    }
 
 
     // Add Class
