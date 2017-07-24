@@ -48,21 +48,31 @@ var C = function (s) {
             return c.e[0].value;
         }
     }
-    
-    
+
     // Data
 
-    c.d = (d='',v = '') => {
-        if (d!='' && v != '') {
+    c.d = (d = '', v = '') => {
+        if (d != '' && v != '') {
             c.e.map((e) => {
                 e.dataset[d] = v;
             });
             return c;
-        } else if(d!='') {
+        } else if (d != '') {
             return c.e[0].dataset[d];
         }
     }
 
+    // Remove Element From DOM
+
+    c.x = () => {
+        c.e.map((e) => {
+            try {
+                e.parentNode.removeChild(e);
+            } catch (e) {
+
+            }
+        });
+    }
 
     // Add Class
 
@@ -72,7 +82,7 @@ var C = function (s) {
         });
         return c;
     }
-    
+
     // Remove Class
 
     c.rc = (rc) => {

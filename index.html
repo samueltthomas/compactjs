@@ -20,13 +20,17 @@
     <input id="cost"/>
     
     
-    <button id="btn">Search</button>
+    <button id="btn">Test</button>
    
     <script>
         
         
-        C('#title').h('<h1>Compact JS</h1>');
-        C('#info').t('Compact JS is a lightweight client-side JavaScript library which provides a very compact API to interact with the HTML DOM.');
+        var title =  C('#title');
+        var info =  C('#info');
+        
+        
+        title.h('<h1>Compact JS</h1>');
+        info.t('Compact JS is a lightweight client-side JavaScript library which provides a very compact API to interact with the HTML DOM.');
         
         console.log(C('#title').h());
         console.log(C('#info').t());
@@ -43,6 +47,7 @@
         
         C('#btn').on('click',function() {
             console.log(C(this).t());
+            info.x();
         });
         
         
