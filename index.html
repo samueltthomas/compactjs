@@ -3,46 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>Compact JS</title>
+    <script src="compact.min.js"></script>
     <style>
-        .err {
-            color:red;
-            border:1px solid red;
+        .text-center {
+            text-align: center;
         }
     </style>
 </head>
 <body>
    
    
-    <p class="t1">hello 1</p>
-    <p class="t2">hello 2</p>
+    <p id="title"></p>
+    
+    <p id="info"></p>
+    
+    <input id="cost"/>
     
     
-    <input id="v1" value="45"/>
-    
-    
-    <script src="compact.js"></script>
-<!--    <script src="compact.min.js"></script>-->
-    
+    <button id="btn">Search</button>
+   
     <script>
-        C('.t1').h('<h1>Hello World</h1>');
-        
-        C('#v1').v('123').d('cost',200);
-        
-        console.log(C('#v1').d('cost'));
         
         
+        C('#title').h('<h1>Compact JS</h1>');
+        C('#info').t('Compact JS is a lightweight client-side JavaScript library which provides a very compact API to interact with the HTML DOM.');
+        
+        console.log(C('#title').h());
+        console.log(C('#info').t());
+        
+        C('#title').ac('text-center');
+        
+        setTimeout(()=>{
+            C('#title').rc('text-center')
+        },1000);
         
         
-        C('.t2').on('click', function() {
-            console.log(C(this).h());
+        C('#cost').v(100);
+        console.log(C('#cost').v());
+        
+        C('#btn').on('click',function() {
+            console.log(C(this).t());
         });
         
-       
-        
-     
         
         
         
+        
+        
+    
     </script>
+   
+  
 </body>
 </html>
