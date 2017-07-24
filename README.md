@@ -4,7 +4,7 @@ Compact JS is a lightweight client-side JavaScript library which provides a very
 
 My goal with this library is to keep everything short and simple instead of being semantic. Hence all of the methods are defined with very short names. Also I would like the library to be as minimalistic as possible. So currently I have implemented only some of the most commonly needed functions. 
 
-Compact JS is not intented to be a competitor for any other library out there. It's just a project that I created to enhance my JavaScript skills and to contribute something to the community along the way. I hope that this will be useful for you in some use cases where other libraries may be an overkill. 
+Compact JS is not intended to be an alternative for any other libraries out there. It's just a project that I created to enhance my JavaScript skills and to contribute something to the community along the way. I hope that this will be useful for you in some use cases where other libraries may be an overkill. 
 
 ## Example 
 
