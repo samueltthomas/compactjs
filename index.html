@@ -37,6 +37,22 @@
                 console.log(C(this).t());
                 info.x();
             });
+
+
+            C('#cost').on('change', function() {
+                console.log(C(this).v());
+            });
+
+
+            C('body').s({
+                "background-color": "#eee",
+                "font-size": "20px",
+            });
+            
+        
+
+
+
         });
 
     </script>
@@ -49,7 +65,13 @@
 
     <p id="info"></p>
 
-    <input id="cost" />
+    <!--    <input id="cost" />-->
+
+    <select id="cost">
+        <option value="50">50</option>
+        <option value="100">100</option>
+        <option value="200">200</option>
+    </select>
 
 
     <button id="btn">Test</button>

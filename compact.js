@@ -2,23 +2,19 @@ var C = function (s) {
 
     var c = {};
     var d = document;
-    
+
     if (typeof (s) === 'string') {
         c.e = [].slice.call(d.querySelectorAll(s));
-    } 
-    else if (typeof (s) === 'function') {
+    } else if (typeof (s) === 'function') {
         document.addEventListener("DOMContentLoaded", (event) => {
             s();
         });
-    }
-    else {
+    } else {
         // To handle C(this)
         c.e = [s];
     }
 
-
     // Ready Event
-
 
     // Text
 
@@ -84,6 +80,24 @@ var C = function (s) {
         });
     }
 
+    // Styles
+
+    c.s = (s = '') => {
+        if (s === '') {
+            return window.getComputedStyle(c.e[0]);
+        } 
+        else if(typeof(s)=='string') {
+            return c.e[0].style[s];
+        }
+        else if(typeof(s)=='object') {
+            c.e.map((e) => {
+                for (var k in s) {
+                    e.style[k] = s[k];
+                }
+            });
+        }
+    }
+
     // Add Class
 
     c.ac = (ac) => {
@@ -102,16 +116,13 @@ var C = function (s) {
         return c;
     }
 
-    // Event
+    // Event Handling
 
     c.on = (event, listener) => {
         c.e.map((e) => {
             e.addEventListener(event, listener);
         });
     }
-
-
-
 
     return c;
 
