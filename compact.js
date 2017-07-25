@@ -9,6 +9,7 @@ var C = function (s) {
         document.addEventListener("DOMContentLoaded", (event) => {
             s();
         });
+        return true;
     } else {
         // To handle C(this)
         c.e = [s];
