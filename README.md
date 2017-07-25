@@ -49,7 +49,9 @@ Also Compact JS uses many of the latest DOM APIs. So please do not use it in pro
     
     // Event Handling. In the place of 'click' you can use any other valid event name
     
-    C('#id').on('click',function() { console.log(C(this).t()); }); 
+    C('#id').on('click',function() { 
+        console.log(C(this).t()); 
+    }); 
     
     
  ```
