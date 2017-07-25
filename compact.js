@@ -14,8 +14,6 @@ var C = function (s) {
         c.e = [s];
     }
 
-    // Ready Event
-
     // Text
 
     c.t = (t = '') => {
@@ -55,7 +53,7 @@ var C = function (s) {
         }
     }
 
-    // Data
+    // Data Attribute
 
     c.d = (d = '', v = '') => {
         if (d != '' && v != '') {
