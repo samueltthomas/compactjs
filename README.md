@@ -46,6 +46,7 @@ Also, Compact JS uses many of the latest DOM APIs. So please do not use it in pr
     
     C('#id').ac('class'); // Add Class
     C('#id').rc('class'); // Remove Class
+    C('#id').hc('class'); // Has Class ? Returns true or false
     
     // Event Handling. In the place of 'click' you can use any other valid event name
     

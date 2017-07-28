@@ -114,6 +114,16 @@ var C = function (s) {
         });
         return c;
     }
+    
+    
+    // Has Class
+    
+    c.hc = (hc) => {
+        if(c.e[0].classList.contains(hc)) {
+            return true;
+        }
+        return false;
+    }
 
     // Event Handling
 
